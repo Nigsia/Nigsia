@@ -4,7 +4,7 @@ import java.util.List;
 
 import eu.nigsia.engine.graphics.*;
 import eu.nigsia.engine.interfaces.*;
-import eu.nigsia.engine.enemies.*;
+import eu.nigsia.engine.entities.enemies.*;
 
 public abstract class Level implements Renderable, Updatable{
 
@@ -21,7 +21,8 @@ public abstract class Level implements Renderable, Updatable{
 	}
 	
 	protected abstract void init();
-	public abstract void update();
+	@Override
+    public abstract void update();
 	protected abstract void draw();
 	protected abstract void handleInput();
 	
